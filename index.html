@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="overlay"></section>
+
+    <section class="box-info">
+        <section class="box-description">
+            <input id="idTask" type="hidden" value="null">
+            <p>Tem certeza de que deseja remover o item?</p>
+            <h1 id="myTask">NULL</h1>
+        </section>
+        <section class="box-info-actions">
+            <button onclick="deleteItem()" class="btn-remover">Remover</button>
+            <button class="btn-cancelar">Cancelar</button>
+        </section>
+    </section>
+
+    <h1 class="title">Lista de Tarefas</h1>
+
+    <section id="b1" class="box-tarefa">
+        <div class="info">
+            <input id="checkb1" onclick="done('tarefa1','checkb1')" type="checkbox">
+            <label for="checkb1">
+                <i class="fas fa-check checked"></i>
+            </label>
+            <p id="tarefa1">Buscar as crianças na escola...</p>
+        </div>
+        <div class="actions">
+            <button class="trash">
+            <i onclick="boxToBottom('tarefa1','b1')" class="far fa-trash-alt"></i>
+            </button>
+        </div>
+    </section>
+    <section id="b2" class="box-tarefa">
+        <div class="info">
+            <input id="checkb2" onclick="done('tarefa2','checkb2')" type="checkbox">
+            <label for="checkb2">
+                <i class="fas fa-check checked"></i>
+            </label>
+            <p id="tarefa2">Tirar o Lixo</p>
+        </div>
+        <div class="actions">
+            <button class="trash">
+            <i onclick="boxToBottom('tarefa2','b2')" class="far fa-trash-alt"></i>
+            </button>
+        </div>
+    </section>
+    <section id="b3" class="box-tarefa">
+        <div class="info">
+            <input id="checkb3" onclick="done('tarefa3','checkb3')" type="checkbox">
+            <label for="checkb3">
+                <i class="fas fa-check checked"></i>
+            </label>
+            <p id="tarefa3">Ler um livro</p>
+        </div>
+        <div class="actions">
+            <button class="trash">
+            <i onclick="boxToBottom('tarefa3','b3')" class="far fa-trash-alt"></i>
+            </button>
+        </div>
+    </section>
+
+<script src="js/jquery.js"></script>
+<script src="js/animation.js"></script>
+</body>
+</html>
